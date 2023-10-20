@@ -23,3 +23,12 @@ console.log(conversion); //output is NaN
 let TypeOfNull=null;
 let conversion1=Number(TypeOfNull);
 console.log(conversion1);// Its output is 0
+
+let isLoggedIn=1;
+let booleanIsLoggedIn=Boolean(isLoggedIn);
+console.log(booleanIsLoggedIn); //Its output is true
+// 1=> true; 0=>false;
+//""(empty string)=>false;
+//"string Input"=>true;
+
+//**********************************************OPERATIONS******************************************* 
