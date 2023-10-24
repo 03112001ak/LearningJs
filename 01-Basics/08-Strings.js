@@ -1,4 +1,4 @@
-const firstName="Aditya ";
+const firstName="aditya ";
 let age=22;
 console.log(firstName+age);//Outdated way of concatenation of the strings
 
@@ -29,3 +29,21 @@ console.log(lastName.toUpperCase()); //this one is a method
  console.log(lastName.charAt(1)); //Gives the character at the first position and its output is a
 
  console.log(lastName.indexOf('K')); //Returns the index of the K character
+
+ const newString=firstName.substring(0,4); //In substring we can't give the negative values
+ console.log(newString);
+
+ const anotherString=firstName.slice(-8,3);//In slice we can give negative values 
+ console.log(anotherString);
+
+ const newString1="  Aditya  ";
+ console.log(newString1);
+console.log(newString1.trim()); //It trims the extra space from the input string in our case hardcoded
+
+const url="https://www.google.com";
+console.log(url);
+console.log(url.replace('google','Aditya'));
+
+console.log(url.includes('google'));
+
+console.log(firstName.split('a'));
