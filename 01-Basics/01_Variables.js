@@ -7,7 +7,7 @@ let accountCity;
 console.table([accountId,accountEmail,accountPassword,accountState,accountCity]);
 
 
-/* We should not be using hte var data type because of the block and functional scope */
+/* We should not be using the var data type because of the block and functional scope */
 //accountId=2312; //The value of the constant cannot be changed
 
 
