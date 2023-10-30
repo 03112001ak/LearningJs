@@ -9,5 +9,10 @@ const dc_heroes=['Superman','flash','batman'];
 marvel_heroes.concat(dc_heroes);
 console.log(marvel_heroes);//This will give the output as 'Thor','Ironman','Spiderman' but wanted 'Thor','Ironman','Spiderman','Superman','flash','batman'
 
-const concat_array=marvel_heroes.concat(dc_heroes);
+const concat_array=marvel_heroes.concat(dc_heroes);//But if we want the concat function to work as desired than we need to know to store it in another variable because it returns a new array which needs to be stored and then displayed
 console.log(concat_array);
+
+
+//another famous and most used to join two arrays is using spread operator
+const all_new_heroes=[...marvel_heroes, ...dc_heroes];
+console.log(all_new_heroes);
