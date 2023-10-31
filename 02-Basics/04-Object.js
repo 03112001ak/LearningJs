@@ -80,3 +80,18 @@ console.log(Object.entries(ObjectUsingConstructor)); //Its output is each key va
 
 //Sometimes it is better to know whether a property exist in the object before going through it, which can be done as follows
 console.log(ObjectUsingConstructor.hasOwnProperty('name'));//returns either true or false;
+
+//Destructuring objects
+const course={
+    courseName:"JS in Hindi",
+    price:"999",
+    courseInstructor:"Aditya"
+}
+//To usually use the values in the object we use the dot operator or the square bracket
+//Lets say we want to use the value for more than 3 times than it can be very unefficient to use three times the dot operators
+//Hence we destructure the objects
+
+//The syntax goes like this 
+// dataType {name of the key whose value needs to be extracted}="object from which the value needs to be extracted"
+const {courseInstructor}=course;
+console.log(courseInstructor);
