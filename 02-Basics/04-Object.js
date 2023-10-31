@@ -95,3 +95,28 @@ const course={
 // dataType {name of the key whose value needs to be extracted}="object from which the value needs to be extracted"
 const {courseInstructor}=course;
 console.log(courseInstructor);
+
+//also within the same code the courseInstructor can also be renamed as follows:
+const {courseInstructor: Instructor}=course;
+console.log(Instructor);
+
+//API is nothing but some values that comes from the backend and how we write them
+//Earlier days it used to come in XML format (very complicated now it comes in the JSON format
+
+//JSON is basically JavaScript Object Notation
+// {
+     //This is an empty JSON
+// } It is just like an object, difference being we need to specify each key as an string eg is given below
+
+// {
+//     "name":"Aditya",
+//     "Age":22,
+//     "email":"adityakarki201@gmail.com"
+// }
+
+//below given is also an example of JSON objects
+[
+    {},
+    {},
+    {}
+]//array of JSON objects
