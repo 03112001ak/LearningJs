@@ -45,3 +45,41 @@ function anotherFunctionDemo(username="Adi"){//If we see the function parameter 
 }
 anotherFunctionDemo();
 anotherFunctionDemo("0311");
+
+
+//There can be a situation where we do not know how many function parameters are required eg being E-Commerce Shopping Cart, user adds number of items into the cart which needs to be added
+//The above problem can be solved using the rest and the spread operator both of them are same (...) there usecases make them different from each other
+
+function calculateCartPrice(...num1){//This is the rest operator
+    console.log(num1)
+}
+calculateCartPrice(10,2023,12,32,1,34,45);//o/p's the array format of this numbers
+
+function anotherExampleOfCalculateCartPrice(value1,value2,...num1){
+    console.log(num1);
+}
+anotherExampleOfCalculateCartPrice(10,2023,12,32,1,34,45);//here value1=10, value2=2023, and rest will be given to num1 which will be converted to array and printed in the form of array
+
+//Let us pass objects into the function
+let user={
+    username:"Aditya",
+    Email:"adityakarki201@gmail.com"
+}
+function handlingObjectUsingFunction(anyObj){
+    console.log(anyObj.username);
+}
+handlingObjectUsingFunction(user);
+//We can also pass key value pairs inside the function as follows:
+handlingObjectUsingFunction({
+    username:"Aditya",
+    Email:"adityakarki201@gmail.com"
+});
+
+//We will see a function taking array as input then printing the second element on it
+let MyNewArray=[100,200,334,345,211,091];
+function printingSecondElementFromTheArray(getArray){
+    return getArray[1];
+}
+//console.log(printingSecondElementFromTheArray(MyNewArray));
+//line number 83 can also be done as follows:
+console.log(printingSecondElementFromTheArray([100,200,334,345,211,091]));
