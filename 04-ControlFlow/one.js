@@ -19,3 +19,9 @@ if(score){
     console.log(`Power is to: ${power1}`);
 }
 console.log(`Power is to: ${power1}`);//This won't give any error because var has global scope hence we should not use it
+
+//There is again another way of writing if statement which is shorthand
+const balance=1000;
+if(balance) console.log(`There is some balance`); //Semi colon is mandatory, multiple lines also possible but have to use comma and at the end followed by semicolon but not a very good practice eg is shown below
+
+//if(balance)  console.log(`There is some balance), console.log(`The balance is ${balance}`);
