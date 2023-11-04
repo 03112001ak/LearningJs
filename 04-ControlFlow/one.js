@@ -25,3 +25,32 @@ const balance=1000;
 if(balance) console.log(`There is some balance`); //Semi colon is mandatory, multiple lines also possible but have to use comma and at the end followed by semicolon but not a very good practice eg is shown below
 
 //if(balance)  console.log(`There is some balance), console.log(`The balance is ${balance}`);
+
+
+// When we have a value which needs to be checked with multiple test cases than we use the switch statement
+// switch (key) { // this is the syntax of the switch statement
+//     case value:
+        
+//         break;
+
+//     default:
+//         break;
+// }
+//Below written is the example of switch case 
+const month="Jan";
+switch(month){
+    case "Dec":
+        console.log("This is the last month");
+        break;
+    case "Jan":
+        console.log("This is the first month");
+        break;
+    default:
+        console.log("Not the correct month you mentioned");
+        break;
+    }
+//Its output is "This is the first month"
+//If break statement is not mentioned than matched case will run + all the other cases will also run except the default one
+    
+    
+
