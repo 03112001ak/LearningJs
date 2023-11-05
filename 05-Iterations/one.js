@@ -21,4 +21,19 @@ for(let i=1;i<10;i++){
     }
     console.log(i);//because of continue 5 will not be printed(skipped) and rest all will be
 }
-//while loopv
+//while loop
+let n=1;
+while(n<=10){
+    console.log(n);
+    n+=2;
+}
+
+
+//do while loop
+let score=1;
+do{
+    console.log(`The score is ${score}`);
+    score++;
+}
+while(score<=10);
+//the statements within the do will run until the condition inside the while is not met and even if it does not match it will run atleast once, for eg give the value of score=11 above, the statements within the do will run for sure and then the condition is checked
