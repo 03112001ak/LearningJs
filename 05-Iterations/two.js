@@ -75,3 +75,5 @@ const myObj={
 // }
 
 //When we used for of loop over the myObj in the above it gave us error by saying "myObj is not iterable" which means we can't iterate over Objects using for of loop
+
+
