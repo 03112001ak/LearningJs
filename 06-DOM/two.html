@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body style="background-color: black">
+    <div class="parent" >
+        <div class="day" style="color: white;">Monday</div>
+        <div class="day" style="color: white;">Tuesday</div>
+        <div class="day" style="color: white;">Wednesday</div>
+        <div class="day" style="color: white;">Thursday</div>
+    </div>
+</body>
+<script>
+    const holder=document.querySelector('.parent');
+    console.log(holder);
+    console.log(holder.children);//children is a method that gives the children of the div class
+    //the code on line no 19 o/ps html collection which is almost like an array but not array just we can access its elements using [0] [1] etc which is done below
+    console.log(holder.children[0]);//logs  <div class="day" style="color: white;">Monday</div> as output
+    console.log(holder.children[0].innerHTML)//logs Monday as output
+
+    //doing the same above thing using the normal for loop 
+    for(let i=0;i<holder.children.length;i++){
+        console.log(holder.children[i].innerHTML);
+    }
+    holder.children[0].style.color='orange';
+    console.log(holder.firstElementChild)
+    console.log(holder.lastElementChild)
+    const firstElement=document.querySelector('.day');
+    console.log(firstElement.parentElement);
+    console.log(firstElement.nextElementSibling);
+
+    console.log(holder.childNodes);//It counts all the child nodes inside the pareent class including all the spaces enters hence the output is 9
+</script>
+</html>
