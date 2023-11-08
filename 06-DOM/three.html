@@ -1,0 +1,23 @@
+//We will  be learning how to create a nodelist programmatically
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: black;">
+    
+</body>
+<script>
+    const divElement=document.createElement('div');
+    console.log(divElement);
+    divElement.className="main";
+    divElement.id=Math.round(Math.random*10+1);
+    divElement.setAttribute("title", "generated title");
+    divElement.style.backgroundColor="green";
+    divElement.innerText="Written using JavaScript"
+    //after doing all of the above things it is not visible whatever we've done in the screen that is because it is only loaded in the memory, now we need to attach it with this html file which can be done as follows
+    document.body.appendChild(divElement);
+</script>
+</html>
