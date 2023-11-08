@@ -1,0 +1,37 @@
+.header{
+    background-color: lightblue;
+    height: 100px;
+    text-align: center;
+    
+}
+.header-button{
+   height: 50px; 
+   margin-top: 25px;
+    
+}
+#home{
+    margin-right: 30px;
+    width: 100px;
+}
+.colors{
+    text-align: center;
+}
+.button{
+    height: 100px;
+    width: 100px;
+}
+#gray{
+    background-color: gray;
+}
+#white{
+    background-color: white;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+.text{
+    text-align: center;
+}
