@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){//this is not an efficient way to write the code because the code here traverses through the whole tree which can't be good for huge code bases
+        const newElement=document.createElement('li');
+        newElement.innerHTML=lang;//innerHTML traverses through the whole tree hence it is inefficient
+        document.querySelector('.language').appendChild(newElement);
+}
+addLanguage("c++");
+
+//More efficient industry used code is written below
+function addOptiLang(lang){
+    const newEle=document.createElement('li');
+    newEle.appendChild(document.createTextNode(lang));
+    document.querySelector('.language').appendChild(newEle);
+}
+addOptiLang('Ruby');
+
+//Editing the HTML file 
+const elementToBeEdited=document.querySelector('li:nth-child(3)');
+const newElem=document.createElement('li');
+newElem.textContent="GoLang";
+//newElem.innerHTML="GOLang";
+elementToBeEdited.replaceWith(newElem);
+
+//Another way of editing
+const firstLang=document.querySelector('li:first-child');
+firstLang.outerHTML='<li>TypeScript</li>'
+
+//remove element
+const lastLang=document.querySelector('li:last-child');
+lastLang.remove();
+</script>
+</html>
