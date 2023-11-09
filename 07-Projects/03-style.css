@@ -1,0 +1,16 @@
+body{
+    background-color: #F3EEEA;
+   color: #776B5D;
+}
+.clock{
+    text-align: center;
+    margin-top: 30%;
+}
+.time{
+    height: 40px;
+    width: 80px;
+    padding: 3px;
+    background-color: #B0A695;
+    border-radius: 10%;
+    margin-left: 46%;
+}
