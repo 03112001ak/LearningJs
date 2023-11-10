@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="04-style.css">
+</head>
+<body>
+    <div class="outer-container" draggable="true">
+        <h1>Number guessing game</h1>
+        <p>Try and guess a random number between 1 and 100.</p>
+        <p>You have 10 attempts to guess the right number</p>
+        <div class="number-guess">
+            <h2>Guess a number</h2>
+            <input type="text" placeholder="Enter the Number"> <br>
+            <button class="button">Submit Guess</button>
+            <div class="guesses">
+                <p>Previous Guesses <span class="guess"></span></p>
+                <p>Guesses Remaining: <span class="value">10</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="04-script.js"></script>
+</html>

@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+font-family: 'Quicksand', sans-serif;
+}
+
+.outer-container{
+    position: relative;
+    top: 100px;
+    left: 300px;
+    background-color: #F3EEEA;
+    color: #776B5D;
+    width: 300px;
+    padding: 15px;
+    border-radius: 5%;
+    text-align: center;
+    align-items: center;
+    box-shadow: 5px 10px 8px #888888;
+    
+}
+input{
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    /* border-color: #EBE3D5; */
+    background-color: #B0A695;
+}
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 10px;
+    color: white;
+    background-color: #776B5D;
+}
