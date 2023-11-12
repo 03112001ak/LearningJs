@@ -28,7 +28,7 @@
     //     alert('owl is clicked');
     // }
 
-    document.getElementById('owl').addEventListener('click',function (e){//click is an event and e inside the function is an event object
+    document.getElementById('owl').addEventListener('click',function (e){//click is an event and e inside the function is an event object 
         // alert('Owl clicked again');
         console.log(e);//go to console you'll get a pointerEvent just explore that because interview questions are asked from that
     },false)//false is the third parameter here it can also be avoided because bydefault it is always false, but is a very important thing
@@ -38,5 +38,79 @@
 
     //Lets learn about the event propogation 
     //third parameter inside the Event listener is by default is false, be it true or false it is called event propogation
+    //Event propagation has two context one is event bubbling and other being event capturing, false means event bubbling and true means event capturing, in market event bubbling is used which is default
+
+
+    //Below is the example of event bubbling
+
+    // document.getElementById('images').addEventListener('click',function(){
+    //     console.log('Image is clicked');
+    // },false);
+
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     console.log('Owl is clicked');
+    // },false);
+
+    //when the owl image is clicked the output will be:
+    //"Owl is clicked" followed by
+    //"Image is clicked"
+
+
+    //Below written is the example of event capturing
+
+    // document.getElementById('images').addEventListener('click',function(){
+    //     console.log('Image is clicked');
+    // },true);
+
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     console.log('Owl is clicked');
+    // },true);
+
+    //when the owl image is clicked the output will be:
+    //"Image is clicked" followed by
+    //"Owl is clicked"
+
+    //Event capturing and bubbling have opposite outputs when run this there major difference, depending on in what order we want the output, one of the two events is used
+
+    //If we do not want any event propogation to happen it can be acheived as follows
+
+
+    // document.getElementById('images').addEventListener('click',function(){
+    //     console.log('Image is clicked');
+    // },false);
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log('Owl is clicked');
+    //     e.stopPropagation();//only works for bubbling not for capturing
+    // },false);
+
+
+    //Its output is 
+    //"Owl is clicked"
+
+
+    //We can prevent default behaviour of any html tags (a(ancho) tag refers to links, when clicked refers us to another webpage) as follows:
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+    })
+
+
+
+    //Lets do one simple project where in we want whichever image is clicked is removed from the page
+    document.getElementById('images').addEventListener('click',function(e){
+       
+        //const removeElement=e.target;//we could only remove the images not the list, but actually we need to remove the whole list which can be done as follows
+        //const removeElement=e.target.parentNode;//now if we click on the list item its parent node is ul hence ul will get removed which means all the elemnt will be removed all at one click to prevent it the code is written as follows
+        if(e.target.tagName==='IMG'){
+            const removeElement=e.target.parentNode;
+            removeElement.remove();
+        }
+        
+
+        //below written is another way of removing element from the html page
+        //removeIt.parentNode.removeChild(removeIt);//
+    });
+    // console.log(totalImages);
+
 </script>
 </html>
