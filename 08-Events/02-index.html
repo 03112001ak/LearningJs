@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Async</title>
+</head>
+<body>
+    <h1>Learning with Chai Aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log('Learning to use setTimeOut');//It takes 2 second of pause before printing.
+    },2000);//it is a method which also calls an API, we get the usability of this method only through browser, not a part of core js
+
+    const sayMyName=function(){
+        console.log('Aditya is learning from this');
+    }
+    setTimeout(sayMyName,2000);//Observer carefully we've only given the function reference not the function executioner
+    const heading=document.querySelector('h1').innerHTML="World's Best Js code";
+    console.log(heading);
+
+    //Now in the below written code I'll be changing the heading of the webpage after 2 seconds when I click on the stop button
+    
+    const button=document.getElementById('start');
+    const changeHeading=function(){
+        document.querySelector('h1').innerHTML='Hi This is Aditya Karki';
+    }
+    
+    const changer=setTimeout(changeHeading,2000);
+  
+    //opposite of setTimeOut is clearTimeOut, it won't allow setTimeOut to execute iff clearTimeOut method executes before SetTimeOut mentioned time
+    //clearTimeout(changer);
+    
+    const Stoptbutton=document.querySelector('#stop');
+    Stoptbutton.addEventListener('click',()=>{
+        clearTimeout(changer);
+    })
+</script>
+</html>
