@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Javascript</title>
+</head>
+<body>
+    <h1>Learning JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //Here we will be learning about setInterval
+    const sayDate=function(str){//Aditya is sent as string from setInterval method when sayDate is being called
+        console.log(`${str},${Date.now()}`);
+    }
+    const IntervalSetter=setInterval(sayDate,1000,"Aditya");
+
+    //Here we will be learning about how to stop setInterval which is done by using clearInterval
+    clearInterval(IntervalSetter)
+    
+    
+    //Now down below, we will be doing one small project which is to print my name in the webpage while clicking on the start button and when we click on the stop button it should stop printing
+    const start=document.getElementById('start');
+    const stop=document.getElementById('stop');
+
+    const newEle=function(){
+        const newElement=document.createElement('p');
+        newElement.innerHTML='Hi Aditya';
+
+        document.body.appendChild(newElement);
+    }
+
+     let nameInterval;
+    start.addEventListener('click',()=>{
+        // const newElement=document.createElement('p');
+        // newElement.innerHTML='Hi Aditya';
+
+        // document.body.appendChild(newElement);
+         nameInterval=setInterval(newEle,1000);
+        // newEle();
+    })
+    stop.addEventListener('click',()=>{
+        clearInterval(nameInterval);
+    })
+</script>
+</html>
