@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+<script>
+    //Now a days API request is done through fetch but before fetch we use to do API request through xml http request
+//XML HTTP Request objects are used to interact with the servers without the need of refreshing the whole page for it to show up, it enables the webpage to just refresh the part of the page without disrupting what the user is doing.
+    const APIurl='https://api.github.com/users/Aditya-Karki03';
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET',APIurl);//open method initializes the newly created request but does not send it, takes two parameters 1. Method (Get,Post,Put,Delete) 2.URL
+    console.log('here');
+    xhr.send();
+    xhr.onreadystatechange=function(){//onreadystatechange asks:- what to do whenever a state changes
+        if(xhr.readyState===4){
+            //console.log(responseText)//Here responseText will give an error because js doesnot know what it is, is it a variable or what?, for error not to come we need to use this keyword
+            //console.log(this.responseText);//sends all the values from the api url to the console & this works on the current context and here the context being form line number 20 till the scope of the function ends
+            const dateFromAPI=this.responseText;
+            console.log(typeof dateFromAPI)//its type is string, it is not an object, to change it to object it should be changed into JSON which can be done as follows
+            const dateFromAPI1=JSON.parse(this.responseText);
+            console.log(dateFromAPI1.location);
+        }
+    };
+</script>
+</html>
