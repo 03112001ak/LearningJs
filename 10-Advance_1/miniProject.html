@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+</head>
+<body>
+    <button>Photos & Followers</button> <br>
+    <!-- <label>Followers: <p></p></label> -->
+</body>
+<script>
+     const requestURL='https://api.github.com/users/hiteshchoudhary';
+     
+     const xhr=new XMLHttpRequest();
+     xhr.open('GET',requestURL);
+     xhr.send();
+     let data;
+        xhr.onreadystatechange=function(){
+        if(xhr.readyState===4){
+             data=JSON.parse(this.responseText);
+            
+            
+        }
+     }
+     const button=document.querySelector('button');
+     button.addEventListener('click',()=>{
+        // document.body.innerHTML=data.avatar_url;
+        // console.log(data.url);
+        const anotherURL=data.avatar_url
+        xhr.open('GET',anotherURL);
+        xhr.send();
+    })
+     
+    //  console.log(dataGiver);
+     
+</script>
+</html>
