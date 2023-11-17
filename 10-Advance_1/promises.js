@@ -74,5 +74,61 @@ promiseFour. then((user1)=>{
 .then((username)=>{
     console.log(username);
 }).catch((err)=>{
-    console.log(err);
+    console.log(err); //finally() is also one method that we use that tells whether the promised work is done or not
+}).finally(()=>console.log('The promise is either resolved or rejected'));
+
+//Instead of using then catch and finally we can also use async await 
+//Issue with async await function is it does not naturally handle the error it needs to use try catch block to handle the error
+
+const promiseFive=new Promise((resolve,reject)=>{
+    
+    setTimeout(()=>{
+        let error='true';
+        if(error==='true'){
+            resolve({username:'javaScript', password:'123'});
+        }
+        else{
+            reject('ERROR: Js is giving us the error');
+        }
+    },1000)
+    
+});
+
+async function consumePromoiseFive(){
+    try{
+        const response=await promiseFive;
+        console.log(response);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+consumePromoiseFive();
+
+
+
+//Now lets work on the real life data, here we will be using fetch to get the data from the api
+//The response of fetch is always promise
+
+async function usingRealLifeData(){
+    try{
+        const response=await fetch('https://jsonplaceholder.typicode.com/users');//We should await to get the data because it takes time to get deliverd
+        const data=await response.json()//We should always use await if we are typecasting the reponse because it takes time to transform one type of data to another
+        console.log(data);
+    }
+    catch(error){
+        console.log('Error: Data not found');
+    }
+}
+//usingRealLifeData();
+
+
+// doing the above same thing with the help of then, catch and finally
+//As we know the response of fetch is a promise therefore
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+    return response.json();
+}).then((data)=>{
+    console.log(data);
 })
