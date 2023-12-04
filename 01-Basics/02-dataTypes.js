@@ -18,5 +18,10 @@ let state;
 
 //object
 
+console.log(typeof Number);//Type is function
+console.log(typeof BigInt);//Type is function
+console.log(typeof Boolean);//Type is function
+console.log(typeof Symbol);//Type is function
+
 console.log(typeof undefined);      //Its type is undefined
 console.log(typeof null)       //Its type is an object
