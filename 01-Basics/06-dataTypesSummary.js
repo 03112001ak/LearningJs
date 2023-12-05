@@ -36,3 +36,21 @@ let MyObj={
 let firstFunction=function(){
     console.log("Well the function is made :-)");
 }
+
+//Example of primtive data type being called by value
+let age=25;
+function ageChanger(value){
+    value=35;
+    console.log(value);//o/p would be 35
+}
+ageChanger(age);
+console.log(age);//o/p would be 25
+
+//Example of reference data type being called by reference
+let person={name:'Aditya', age: 23}
+function anotherAgeChanger(myObj){
+    myObj.age=33;
+    console.log(myObj.age);//o/p would be 33
+}
+anotherAgeChanger(person);
+console.log(`The person's age is ${person.age}`);//o/p would be 33
