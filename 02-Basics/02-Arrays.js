@@ -21,7 +21,7 @@ console.log(all_new_heroes);
 
 const arrayWithinArray=[1,2,[3,4],5,6,[7,8,[9,0]]];
 //Sometimes if we want to change nested array into one normal array it can be done as follows
-const ConvertedIntoOneArray=arrayWithinArray.flat(3);//arguement 3 means till 3rd level depth I want my arrayWithinarray to be converted into one array
+const ConvertedIntoOneArray=arrayWithinArray.flat(3);//arguement 3 means till 3rd level depth I want my arrayWithinarray to be converted into one array and level always starts with 0 aka base level is 0
 console.log(ConvertedIntoOneArray);
 
 //We can also check that if the given value is an array or not using the following
@@ -33,9 +33,10 @@ console.log(Array.from("Aditya"));
 //Lets give an object as an arguement inside the from method
 console.log(Array.from({name:"Aditya"})); //Its O/P is an empty array because we need to tell it to make array of keys or values if it can't make an array out of it than it will return empty array
 
+//Array.from(), Array.isArray(), Array.of() are static methods, this method are associated with the class rather than the instance of the class
 
 let score1=100;
 let score2=200;
 let score3=300;
 
-console.log(array.of(score1,score2,score3)); //of is a method that can combine any variables holding individual values into arrays
+console.log(Array.of(score1,score2,score3)); //of is a method that can combine any variables holding individual values into arrays
