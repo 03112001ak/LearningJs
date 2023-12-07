@@ -7,7 +7,7 @@
 //  Declaring an object using literals
 const JsUser={}; //elements within the curly braces are objects as of now it is an empty object
 
-const anotherUser={ //objects are made up of key value pairs and keys are treated like strings inside the compiler
+const anotherUser={ //objects are made up of key value pairs (key value pairs are aka properties) and keys are treated like strings inside the compiler
     name:"Aditya",
     age:22,
     location:"Bomdila",
