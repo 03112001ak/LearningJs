@@ -18,7 +18,7 @@ const NestedObj={
         }
     }
 }
-//console.log(NestedObj[fullname[userFullName[firstName]]]);//giving me error
+console.log(NestedObj[fullname][userFullName][firstName]);
 console.log(NestedObj.fullname.userFullName.lastName);
 
 //We can also combine objects 
