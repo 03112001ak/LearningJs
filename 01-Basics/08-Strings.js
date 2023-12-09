@@ -21,6 +21,7 @@ const lastName=new String("Karki"); //another way of declaring a string using st
 
 console.log(lastName[0]);//Its output is K because it is an string object, hence key value pair 
 // we accessed the pair with the help of the key
+console.log(lastName.0)//This code does not work in here
 
 console.log(lastName.length); //length is a property, similarly to the properties all the methods could also be accessed
 
