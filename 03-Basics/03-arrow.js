@@ -8,6 +8,8 @@ const user={
 }
 console.log(typeof this); //this is an object
 console.log(user["WelcomeMessage"]);//not able to access the function  using the square bracket method from an object
+//below is how we access the function declared inside a object
+user['WelcomeMessage']();
 
 
 
