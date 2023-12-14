@@ -31,10 +31,10 @@ console.log(lastName.toUpperCase()); //this one is a method
 
  console.log(lastName.indexOf('K')); //Returns the index of the K character
 
- const newString=firstName.substring(0,4); //In substring we can't give the negative values
+ const newString=firstName.substring(0,4); //In substring we can't give the negative values, 4 is the number of characters & 0 is the starting index
  console.log(newString);
 
- const anotherString=firstName.slice(-8,3);//In slice we can give negative values 
+ const anotherString=firstName.slice(-8,3);//In slice we can give negative values, the last character will be lastIndex-1
  console.log(anotherString);
 
  const newString1="  Aditya  ";
@@ -43,8 +43,8 @@ console.log(newString1.trim()); //It trims the extra space from the input string
 
 const url="https://www.google.com";
 console.log(url);
-console.log(url.replace('google','Aditya'));
+console.log(url.replace('google','Aditya')); //When stored in a variable and logged the typeof the output is string
 
-console.log(url.includes('google'));
+console.log(url.includes('google')); //When stored in a variable and logged the typeof the output is boolean
 
-console.log(firstName.split('a'));
+console.log(firstName.split('a')); //When stored in a variable and logged the typeof the output is object
