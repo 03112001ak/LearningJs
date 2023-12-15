@@ -52,6 +52,7 @@ anotherFunctionDemo("0311");
 
 function calculateCartPrice(...num1){//This is the rest operator
     console.log(num1)
+    console.log(typeof(num1))//It is an object
 }
 calculateCartPrice(10,2023,12,32,1,34,45);//o/p's the array format of this numbers
 
