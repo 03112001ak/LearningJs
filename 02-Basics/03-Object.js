@@ -32,6 +32,7 @@ const understandingLine19={
      [declaringSymbol]:"anotherKey" //this is how a key whose data type is symbol is given a value  
 }
 console.log(understandingLine19["name"]);//we can not use dot operator in here because as we see above name is in double quotes 
+//Since symbol comprises of unique values, hence we do not have to use inverted commas explicitly for other values we need to use it
 console.log(understandingLine19[declaringSymbol]);// Here declaringSymbol is a key of type symbol hence square bracket has to be used
 console.log(declaringSymbol);//Here declaringSymbol is a variable which holds a value
 
