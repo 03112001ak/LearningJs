@@ -36,6 +36,7 @@ let MyObj={
 let firstFunction=function(){
     console.log("Well the function is made :-)");
 }
+console.log(typeof firstFunction);//Its o/p is function but we should call it as object function
 
 //Example of primtive data type being called by value
 let age=25;
