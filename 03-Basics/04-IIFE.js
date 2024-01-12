@@ -10,7 +10,7 @@ chai();
 
 //The above code can also be written as follows using IIFE
 //We know that bracket after chai indicates execution
-//The whole function should wrapped inside the brackets and after that at last comes the brackets for function execution followed by semicolon (semicolon is very important)
+//The whole function should wrapped inside the brackets and after that at last comes the brackets for function execution followed by semicolon (semicolon is very important) if we've multiple IIFE's and semicolon is not included at the end it won't know where to end the execution context
 (function chai(){ //this is named IIFE
     console.log("Connected");
 })(); //To end the above function it is necessary to add semicolon at the end in the IIFE
