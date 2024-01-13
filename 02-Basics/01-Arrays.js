@@ -1,9 +1,11 @@
 const myArr=[1,"Aditya",3,4,5];
 const myHeroes=["Shaktiman","Naagraj"];
 
-const myArr2=new Array(1,2,3,4);
+const myArr2=new Array(1,2,3,4);//No square bracket is used
 console.log(myArr2[1]);
 console.log(myArr[1]);
+
+//Whenever we copy an array it creates a shallow copy(original array will be affected if any operation is performed) which means the variable in which the array is copied shares the same reference point as that of the original array, we've learned this while learning that primitive(call by value) and refernce type(call by reference) 
 
 //Array methods
 
