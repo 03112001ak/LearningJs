@@ -25,7 +25,7 @@ console.log(lastName.0)//This code does not work in here
 
 console.log(lastName.length); //length is a property, similarly to the properties all the methods could also be accessed
 
-console.log(lastName.toUpperCase()); //this one is a method
+console.log(lastName.toUpperCase()); //this one is a method, which changes all the characters of lastName to uppercase but does not affect the original string because string is a primitive data type which are call by value which means a copy of original value is passed and that is changed not the original
 
  console.log(lastName.charAt(1)); //Gives the character at the first position and its output is a
 
@@ -36,6 +36,7 @@ console.log(lastName.toUpperCase()); //this one is a method
 
  const anotherString=firstName.slice(-8,3);//In slice we can give negative values, the last character will be lastIndex-1
  console.log(anotherString);
+//difference between slice and substring is we can give -ve values inside the slice wheras if we give -ve value inside the substring it will ignore that value and start from 0
 
  const newString1="  Aditya  ";
  console.log(newString1);
