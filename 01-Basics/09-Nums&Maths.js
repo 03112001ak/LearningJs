@@ -1,15 +1,17 @@
 const score=400;
-console.log(score);
+console.log(score);// 400 //since we know that js is a dynamically typed language hence it detects that score is holding a number
 
+
+//the below code explicitly tells js that I want a number, by creating instance of Number object and passing 400 as value it its constructor 
 const balance=new Number(400);//we can get access to more properties and methods using this.
-console.log(balance);
+console.log(balance);//[Number: 400]
 
 console.log(balance.toString().length);//we changed the balance to string and output the lenght of it
 
 console.log(balance.toFixed(2));//its output is 400.00 it adds 2 0's after decimal as asked within the method itself
 
 const FloatNumber=123.3933;
-console.log(FloatNumber.toPrecision(4)); //Its output is 123.4 works as set precision operator in C++
+console.log(FloatNumber.toPrecision(4)); //Its output is 123.4 works as set precision operator in C++ and returns a string
 
 const hundreds=100000000;
 console.log(hundreds.toLocaleString()); //puts commas in between the numbers to make it more readable by default American place value system
@@ -24,6 +26,8 @@ console.log(Math.abs(-4));//Changes -ve values to +ve not the other way around
 console.log(Math.round(4.6));//If the value is more than 5 after decimal it will round off the to 1 more than that
 console.log(Math.ceil(4.2));//If the value is slightly greater than the number eg 4.2>4 than its output is going to be 5
 console.log(Math.floor(4.7)); //It is the opposite of ceil its output is going to be 4
+console.log(Math.min(3,4,3,1));//1
+console.log(Math.max(21,2,1,99));//99
 
 console.log(Math.random());//It gives random values between 0&1 0 & 1 both are not included in this
 
