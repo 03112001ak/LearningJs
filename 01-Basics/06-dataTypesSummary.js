@@ -4,7 +4,7 @@
 
 //There are two types of data types in js
 // 1. Primitive 2. Non Primitive/Reference type
-//difference between both of them is, how we store and access data from it
+//difference between both of them is, how we store and access data from it on the basis of this only the data types has been categorised
 
 //  Primitive data types are call by value(changes are made in the *copy* of the original value) in nature
 //  Primitive have 7 data types within them
@@ -20,6 +20,9 @@ console.log(id===anotherId);//Its output is false as we knew that Symbol is for 
 console.log(id);//Its output is Symbol(123)
 console.log(anotherId);//Its output is Symbol(123)
 console.log(id==anotherId); //Its output is also false
+
+const bigNumber=234812134576789645352342423n;//This is a bigInt number, a number appended with 'n'
+console.log(typeof bigNumber);//undefined, it is a special case
 
 //array decalaration
 let arrayOfHeroes=["Shaktiman", "Naagraj","Doga"];
