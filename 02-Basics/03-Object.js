@@ -1,6 +1,6 @@
 //There are two ways of dieclaring an object
 //  1. Literal  2.Constructor
-//  When we declare an object using the constructor there comes the concept of singleton which means whenever we create an object using constructor singleton object is made which is one of a kind
+//  When we declare an object using the constructor there comes the concept of singleton which means whenever we create an object using Object.create constructor singleton object is made which is one of a kind
 //  Wheras while we declare an object using the literals singleton object is not made
 
 
