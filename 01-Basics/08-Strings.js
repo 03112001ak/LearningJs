@@ -8,6 +8,7 @@ console.log(`Hi My Name is ${firstName}, and I am ${age} years old`);
 
 const lastName=new String("Karki"); //another way of declaring a string using string object
 //By using new keyword we use javaScript objects
+//lastName is the instance(instance in loose way can also be said as one replica of original object which is created and initialized using constructor, replica of object(string) called with the help of constructor using the new keyword) of String object which is initialized with "Karki"
 
 //when we log the code in line no 9 in the browser its O/P would be:- String {`Karki`}
 // 0: "K"
