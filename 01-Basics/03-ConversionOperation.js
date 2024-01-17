@@ -7,7 +7,7 @@ console.log(typeof score);
 
 //lets try and convert string into number
 
-let valueInNumber=Number(score);
+let valueInNumber=Number(score);//Number is function taking score as an argument
 /* The above code gave the output of NaN i.e. Not a Number */
 
 let name=String(valueInNumber);
